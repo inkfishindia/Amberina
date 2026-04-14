@@ -64,9 +64,16 @@ nav a {
   position: relative;
   min-height: 350px;
   padding: 2.5rem 1rem;
-  background: linear-gradient(rgb(26 31 25 / 45%), rgb(28 22 15 / 60%)),
-    url("https://images.unsplash.com/photo-1594631661960-9c593f9d9d36?auto=format&fit=crop&w=1500&q=80") center/cover;
   border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-overlay {
@@ -183,10 +190,22 @@ p {
   text-align: center;
 }
 
+.feature-image {
+  display: block;
+  width: min(800px, 100%);
+  margin: 0.4rem auto 0;
+  border: 1px solid #d6c29c;
+  border-radius: 8px;
+}
+
 .split {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.1rem;
+}
+
+.tasting {
+  margin-top: 0.7rem;
 }
 
 .facts {
@@ -202,12 +221,6 @@ p {
   border-radius: 999px;
   padding: 0.2rem 0.7rem;
   font-size: 0.82rem;
-}
-
-.brew-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.7rem;
 }
 
 footer {
@@ -233,8 +246,7 @@ footer {
 
   .tea-grid,
   .grade-grid,
-  .split,
-  .brew-grid {
+  .split {
     grid-template-columns: 1fr;
   }
 }

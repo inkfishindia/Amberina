@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amberina Tea</title>
+    <title>Amberina | Estate-grown Nilgiri Tea</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,94 +13,108 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="brand">AMBERINA</div>
-      <nav>
-        <a href="#tea">Our Tea</a>
-        <a href="#estate">Our Estate</a>
-        <a href="#shop">Shop</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand">AMBERINA</div>
+        <nav>
+          <a href="#teas">Our Teas</a>
+          <a href="#estate">Our Estate</a>
+          <a href="#story">Story</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
 
-    <main>
-      <section class="hero" id="tea">
-        <p class="badge">Nilgiri Orthodox Tea • Est. 1977</p>
-        <h1>Amberina</h1>
-        <p class="subhead">Estate-grown teas with a warm vintage tea-house feel.</p>
-        <a href="#shop" class="cta">Shop Our Teas</a>
-      </section>
-
-      <section class="products" id="shop">
-        <h2>Featured Collection</h2>
-        <div class="grid">
-          <article class="card">
-            <div class="pack">FOP</div>
-            <h3>FOP</h3>
-            <p>$5.00</p>
-          </article>
-          <article class="card">
-            <div class="pack">BOP</div>
-            <h3>BOP</h3>
-            <p>$2.90</p>
-          </article>
-          <article class="card">
-            <div class="pack">Gift Tin</div>
-            <h3>Gift Tin</h3>
-            <p>$7.90</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="product-detail">
-        <div class="detail-pack">FOP</div>
-        <div class="detail-body">
-          <h2>Amberina • FOP</h2>
-          <p class="detail-copy">
-            Bright infusion with floral top notes and a smooth, rounded finish.
-            A balanced daily black tea crafted for both hot brewing and iced tea.
-          </p>
-          <ul>
-            <li>3 brews</li>
-            <li>Leaf</li>
-            <li>4–5 mins</li>
-            <li>Strong</li>
-          </ul>
-          <div class="buy-row">
-            <span>$20.00</span>
-            <button>Add to Cart</button>
+      <main>
+        <section class="hero" id="top">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <p class="crest">Nilgiri Orthodox Tea • Est. 1977</p>
+            <h1>AMBERINA</h1>
+            <p class="subtitle">Estate-grown. Crafted at source.</p>
+            <a class="cta" href="#teas">Shop Our Teas</a>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="estate" id="estate">
-        <h2>Our Estate</h2>
-        <p>
-          Nestled in the Nilgiri mountains, Amberina combines traditional tea
-          craftsmanship with regenerative farming. We focus on quality over volume,
-          hand-finishing lots that preserve aroma, body, and character.
-        </p>
-        <div class="pillars">
-          <article>
-            <h3>People</h3>
-            <p>Family-led team with deep local knowledge.</p>
-          </article>
-          <article>
-            <h3>Process</h3>
-            <p>Careful plucking, orthodox rolling, and patient drying.</p>
-          </article>
-          <article>
-            <h3>Place</h3>
-            <p>High-elevation fields with cool-climate complexity.</p>
-          </article>
-        </div>
-      </section>
-    </main>
+        <section class="motto">
+          <p>Estate-grown. Crafted at source.</p>
+        </section>
 
-    <footer id="contact">
-      <strong>Amberina</strong>
-      <p>Estate-grown, crafted at source.</p>
-      <p>hello@amberina.example</p>
-    </footer>
+        <section class="panel" id="teas">
+          <h2>Our Teas</h2>
+          <div class="tea-grid">
+            <article class="tea-card">
+              <div class="pack">FOP</div>
+              <h3>FOP — Everyday Black Tea</h3>
+              <p class="desc">Tasting note: brighter cup, clean finish.</p>
+              <p class="price">$20 · 200g</p>
+              <button>Add to Cart</button>
+            </article>
+            <article class="tea-card">
+              <div class="pack light">BOP</div>
+              <h3>BOP — Milk Tea</h3>
+              <p class="desc">Tasting note: stronger, works with milk.</p>
+              <p class="price">$30 · 200g</p>
+              <button>Add to Cart</button>
+            </article>
+          </div>
+          <p class="meta">Box 200g · Pouch 100g · Tin 50g</p>
+        </section>
+
+        <section class="panel grade-strip">
+          <h2>Know Your Grade</h2>
+          <div class="grade-grid">
+            <article>
+              <h3>FOP</h3>
+              <p>Flowery Orange Pekoe</p>
+              <p>Whole leaf, lighter cup, best without milk.</p>
+            </article>
+            <article>
+              <h3>BOP</h3>
+              <p>Broken Orange Pekoe</p>
+              <p>Broken leaf, stronger body, ideal with milk.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel split" id="estate">
+          <article>
+            <h2>Our Estate</h2>
+            <p>
+              Our Victorian-era tea estate remains family run and rooted in the
+              Nilgiris. Regenerative practices and careful orthodox processing keep
+              each cup expressive and balanced.
+            </p>
+            <ul class="facts">
+              <li>Since 1977</li>
+              <li>1800m Elevation</li>
+              <li>Orthodox Process</li>
+            </ul>
+          </article>
+          <article id="story">
+            <h2>How to Brew</h2>
+            <div class="brew-grid">
+              <div>
+                <h3>FOP</h3>
+                <p>20°C / 100°C</p>
+                <p>2 steeps · 2.5 min</p>
+                <p>Serve straight</p>
+              </div>
+              <div>
+                <h3>BOP</h3>
+                <p>30°C / 100°C</p>
+                <p>2 steeps · 2 min</p>
+                <p>Serve with milk</p>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer id="contact">
+        <div class="footer-brand">AMBERINA</div>
+        <p>Nilgiris, South India · contact@amberina.example</p>
+        <p>Estate-grown. Crafted at source.</p>
+      </footer>
+    </div>
   </body>
 </html>

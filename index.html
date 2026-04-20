@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amberina | Estate-grown Nilgiri Tea</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="brand">AMBERINA</div>
+        <nav>
+          <a href="#teas">Our Teas</a>
+          <a href="#estate">Our Estate</a>
+          <a href="#story">Story</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="top">
+          <img
+            class="hero-bg"
+            data-image="hero"
+            src="assets/images/hero-estate.jpg"
+            alt="Amberina tea estate with tea gardens and tea products"
+          />
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <p class="crest">Nilgiri Orthodox Tea • Est. 1977</p>
+            <h1>AMBERINA</h1>
+            <p class="subtitle">Estate-grown. Crafted at source.</p>
+            <a class="cta" href="#teas">Shop Our Teas</a>
+          </div>
+        </section>
+
+        <section class="motto">
+          <p>Estate-grown. Crafted at source.</p>
+        </section>
+
+        <section class="panel" id="teas">
+          <h2>Our Teas</h2>
+          <div class="tea-grid">
+            <article class="tea-card">
+              <div class="pack">FOP</div>
+              <h3>FOP — Everyday Black Tea</h3>
+              <p class="desc">Tasting note: brighter cup, clean finish.</p>
+              <p class="price">$20 · 200g</p>
+              <button>Add to Cart</button>
+            </article>
+            <article class="tea-card">
+              <div class="pack light">BOP</div>
+              <h3>BOP — Milk Tea</h3>
+              <p class="desc">Tasting note: stronger, works with milk.</p>
+              <p class="price">$30 · 200g</p>
+              <button>Add to Cart</button>
+            </article>
+          </div>
+          <p class="meta">Box 200g · Pouch 100g · Tin 50g</p>
+        </section>
+
+        <section class="panel grade-strip">
+          <h2>Know Your Grade</h2>
+          <div class="grade-grid">
+            <article>
+              <h3>FOP</h3>
+              <p>Flowery Orange Pekoe</p>
+              <p>Whole leaf, lighter cup, best without milk.</p>
+            </article>
+            <article>
+              <h3>BOP</h3>
+              <p>Broken Orange Pekoe</p>
+              <p>Broken leaf, stronger body, ideal with milk.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel" id="estate">
+          <h2>Estate Highlights</h2>
+          <img
+            class="feature-image"
+            data-image="highlights"
+            src="assets/images/estate-highlights.png"
+            alt="Three icons: since 1977 family estate, 1800m elevation, orthodox process"
+          />
+        </section>
+
+        <section class="panel split" id="story">
+          <article>
+            <h2>Our Estate</h2>
+            <p>
+              Our Victorian-era tea estate remains family run and rooted in the
+              Nilgiris. Regenerative practices and careful orthodox processing keep
+              each cup expressive and balanced.
+            </p>
+            <ul class="facts">
+              <li>Since 1977</li>
+              <li>1800m Elevation</li>
+              <li>Orthodox Process</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Tasting Notes</h2>
+            <p>Delicate, floral, high-grown notes for our premium loose-leaf lots.</p>
+            <img
+              class="feature-image tasting"
+              data-image="tasting"
+              src="assets/images/tasting-notes.jpg"
+              alt="Amberina tasting setup with cup of tea and premium tea tin"
+            />
+          </article>
+        </section>
+      </main>
+
+      <footer id="contact">
+        <div class="footer-brand">AMBERINA</div>
+        <p>Nilgiris, South India · contact@amberina.example</p>
+        <p>Estate-grown. Crafted at source.</p>
+      </footer>
+    </div>
+
+    <script>
+      const imageCandidates = {
+        hero: [
+          "assets/images/hero-estate.jpg",
+          "assets/images/hero-estate.jpeg",
+          "assets/images/hero-estate.png",
+          "assets/images/hero-estate.webp"
+        ],
+        highlights: [
+          "assets/images/estate-highlights.png",
+          "assets/images/estate-highlights.jpg",
+          "assets/images/estate-highlights.jpeg",
+          "assets/images/estate-highlights.webp"
+        ],
+        tasting: [
+          "assets/images/tasting-notes.jpg",
+          "assets/images/tasting-notes.jpeg",
+          "assets/images/tasting-notes.png",
+          "assets/images/tasting-notes.webp"
+        ]
+      };
+
+      const placeholderDataUrl = (label) =>
+        `data:image/svg+xml;utf8,${encodeURIComponent(`
+          <svg xmlns='http://www.w3.org/2000/svg' width='1400' height='800'>
+            <defs>
+              <linearGradient id='g' x1='0' y1='0' x2='1' y2='1'>
+                <stop stop-color='#e8dcc4' offset='0'/>
+                <stop stop-color='#f6f1e5' offset='1'/>
+              </linearGradient>
+            </defs>
+            <rect width='100%' height='100%' fill='url(#g)'/>
+            <text x='50%' y='46%' text-anchor='middle' fill='#5f4b2a' font-size='42' font-family='Georgia'>Amberina image missing</text>
+            <text x='50%' y='54%' text-anchor='middle' fill='#7a6644' font-size='28' font-family='Arial'>Add ${label} to assets/images</text>
+          </svg>
+        `)}`;
+
+      const tryLoad = (src) =>
+        new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => resolve(src);
+          img.onerror = reject;
+          img.src = src;
+        });
+
+      async function resolveImage(el) {
+        const key = el.dataset.image;
+        const options = imageCandidates[key] || [];
+
+        for (const src of options) {
+          try {
+            await tryLoad(src);
+            el.src = src;
+            return;
+          } catch (_) {}
+        }
+
+        el.src = placeholderDataUrl(options[0] || "image-file");
+      }
+
+      document.querySelectorAll("img[data-image]").forEach((el) => resolveImage(el));
+    </script>
+  </body>
+</html>

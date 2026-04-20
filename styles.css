@@ -1,0 +1,252 @@
+:root {
+  --paper: #f7f1e3;
+  --panel: #fbf7ee;
+  --line: #d8c9a8;
+  --ink: #271f16;
+  --accent: #b0813c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top left, #5a2d16, #27140c 60%);
+  min-height: 100vh;
+  padding: 2rem 0.8rem;
+}
+
+.page-shell {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  border: 1px solid #7d5a2d;
+  box-shadow: 0 20px 40px rgb(0 0 0 / 35%);
+  background: var(--paper);
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand,
+h1,
+h2,
+h3,
+.footer-brand,
+.motto {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.brand {
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+}
+
+nav {
+  display: flex;
+  gap: 0.8rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.88rem;
+}
+
+.hero {
+  position: relative;
+  min-height: 350px;
+  padding: 2.5rem 1rem;
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(12 17 10 / 10%), rgb(20 13 9 / 55%));
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #f9f2e6;
+}
+
+.crest {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+h1 {
+  margin: 0.4rem 0;
+  font-size: clamp(2.6rem, 10vw, 4.4rem);
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.cta,
+button {
+  border: 1px solid #d1b589;
+  background: var(--accent);
+  color: #fff;
+  margin-top: 0.9rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.motto {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.panel {
+  padding: 1.4rem 1rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+
+h2 {
+  margin: 0 0 0.8rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.tea-grid,
+.grade-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.tea-card {
+  border: 1px solid #cdb790;
+  border-radius: 6px;
+  padding: 0.9rem;
+  background: #fffdf8;
+  text-align: center;
+}
+
+.pack {
+  width: 110px;
+  height: 145px;
+  margin: 0 auto 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #a68a5a;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(150deg, #dfc79a, #ae8a5d);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+}
+
+.pack.light {
+  background: linear-gradient(150deg, #dcb593, #b77352);
+}
+
+.tea-card h3 {
+  margin: 0.3rem 0;
+  font-size: 1.15rem;
+}
+
+.desc,
+.price,
+.meta,
+p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.meta {
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+.grade-grid article {
+  text-align: center;
+}
+
+.feature-image {
+  display: block;
+  width: min(800px, 100%);
+  margin: 0.4rem auto 0;
+  border: 1px solid #d6c29c;
+  border-radius: 8px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.tasting {
+  margin-top: 0.7rem;
+}
+
+.facts {
+  list-style: none;
+  display: flex;
+  gap: 0.6rem;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.facts li {
+  border: 1px solid #cfba95;
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.82rem;
+}
+
+footer {
+  text-align: center;
+  background: #241811;
+  color: #efe5d3;
+  padding: 1.5rem 1rem;
+}
+
+.footer-brand {
+  letter-spacing: 0.1em;
+  font-size: 1.45rem;
+}
+
+@media (max-width: 760px) {
+  nav {
+    display: none;
+  }
+
+  .motto {
+    font-size: 1.5rem;
+  }
+
+  .tea-grid,
+  .grade-grid,
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
